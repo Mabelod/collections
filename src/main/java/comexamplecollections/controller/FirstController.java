@@ -1,9 +1,6 @@
 package comexamplecollections.controller;
 
 import comexamplecollections.domain.Employee;
-import comexamplecollections.example.EmployeeAlreadyAdded;
-import comexamplecollections.example.EmployeeNotFound;
-import comexamplecollections.example.EmployeeStorageIsFullException;
 import comexamplecollections.service.EmployeeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,13 +19,9 @@ public class FirstController {
     }
 
     @GetMapping()
-    public String getEmployees(@RequestParam("number") Integer number) {
-        final String employees;
-        try {
+    public Employee getEmployees(@RequestParam("number") Integer number) {
+        final Employee employees;
             employees = employeeService.getEmployees(number);
-        } catch (EmployeeStorageIsFullException e) {
-            return "Нет сотрудника под таким номером";
-        }
         return employees;
     }
 
@@ -38,36 +31,24 @@ public class FirstController {
         final Employee employee = new Employee(
                 firstName,
                 lastName);
-        try {
             employeeService.addEmployees(employee);
-        } catch (EmployeeAlreadyAdded employeeAlreadyAdded) {
-            return "Сотрудник уже добавлен";
-        }
         return "Сотрудник добавлен";
     }
 
     @GetMapping("/remove")
     public String remove(@RequestParam("number") Integer number) {
-        try {
             employeeService.removeEmployees(number);
-        } catch (EmployeeStorageIsFullException e) {
-            return "Нет сотрудника под таким номером";
-        }
         return "Сотрудник удален";
     }
 
     @GetMapping("/find")
-    public String find(@RequestParam("firstName") String firstName,
+    public Employee find(@RequestParam("firstName") String firstName,
                       @RequestParam("lastName") String lastName) {
         final Employee employee = new Employee(
                 firstName,
                 lastName);
-        try {
             employeeService.findEmployees(employee);
-        } catch (EmployeeNotFound e) {
-            return "Сотрудник не найден.";
-        }
-        return "Сотрудник найден = " + firstName + " " + lastName;
+        return employee;
     }
     @GetMapping("conclusion")
     public List<Employee> conclusion() {

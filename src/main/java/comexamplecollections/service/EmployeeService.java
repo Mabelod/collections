@@ -29,14 +29,13 @@ public class EmployeeService {
         return employee;
     }
 
-    public String getEmployees(Integer number) {
+    public Employee getEmployees(Integer number) {
         final Employee employee;
         if (number >= employees.size()) {
             throw new EmployeeStorageIsFullException();
         }
         employee = employees.get(number);
-        final String personEmployees = employee.getFirstName() + " " + employee.getLastName();
-        return personEmployees;
+        return employee;
     }
 
     public void removeEmployees(int number) {
