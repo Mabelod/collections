@@ -4,7 +4,7 @@ import java.util.*;
 
 public class HomeTask {
     private static List<Integer> nums = new ArrayList<>(List.of(10, 1, 8, 3, 4, 5, 5, 8, 6, 70));
-    private static List<String> words = new ArrayList<>(List.of("будем", "Требуется", "будем", "Мы", "Делать", "Дела", "Требуется", "Дела", "Дела"));
+    private static List<String> words = new ArrayList<>(List.of("будем", "Требуется", "будем", "Мы", "Делать", "Дела", "Требуется", "Дела", "Дела", "вот-так", "будем","Как-так", "будем"));
     private static List<String> words3 = new ArrayList<>();
 
     public static void main(String[] args) {
