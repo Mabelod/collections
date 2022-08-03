@@ -2,8 +2,6 @@ package comexamplecollections.service;
 
 import comexamplecollections.domain.Employee;
 import comexamplecollections.example.EmployeeAlreadyAdded;
-import comexamplecollections.example.EmployeeNotFound;
-import comexamplecollections.example.EmployeeStorageIsFullException;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -12,55 +10,48 @@ import java.util.Map;
 @Service
 public class EmployeeService {
 
-    final Map<Integer,Employee> employees = new HashMap<>(Map.of(
-            1,
-            new Employee("Иван", "Иванов"),
-            2,
-            new Employee("Семенов", "Андрей"),
-            3,
-            new Employee("Николаев", "Игорь"),
-            4,
-            new Employee("Никитина", "Анна"),
-            5,
-            new Employee("Тодорашко", "Валерия"),
-            6,
-            new Employee("Пименова", "Ксения")
+    final Map<String,Employee> employees = new HashMap<>(Map.of(
+            "Иван Иванов",
+            new Employee("Иван", "Иванов",2,100000),
+            "Семенов Андрей",
+            new Employee("Семенов", "Андрей",1, 34000),
+            "Николаев Игорь",
+            new Employee("Николаев", "Игорь", 4, 58000),
+            "Никитина Анна",
+            new Employee("Никитина", "Анна", 3, 97000),
+            "Тодорашко Валерия",
+            new Employee("Тодорашко", "Валерия", 5, 64000),
+            "Пименова Ксения",
+            new Employee("Пименова", "Ксения",5, 88000)
     ));
-
-    public Map<Integer, Employee> conclusion() {
+    public Map<String, Employee> conclusion() {
         return employees;
     }
-
-    public Employee getEmployees(Integer id) {
+    public Employee findEmployees(String firstName ,String lastName) {
         final Employee employee;
-        if (id > employees.size()) {
-            throw new EmployeeStorageIsFullException();
-        }
-        employee = employees.get(id);
-        return employee;
-    }
-
-    public void removeEmployees(int id) {
-        if(id > employees.size()){
-            throw new EmployeeStorageIsFullException();
-        }
-        employees.remove(id);
-    }
-
-    public void addEmployees(Integer id ,Employee employee) {
-        if (employees.containsValue(employee) == true) {
+        String key = getKey(firstName, lastName);
+        if (employees.containsKey(key) == false) {
             throw new EmployeeAlreadyAdded();
         }
-        employees.put(id ,employee);
+        employee = employees.get(key);
+        return employee;
     }
-
-    public void findEmployees(Employee employee) {
-        if (employees.containsValue(employee) == false) {
-            throw new EmployeeNotFound();
+    public void removeEmployees(String firstName ,String lastName) {
+        String key = getKey(firstName, lastName);
+        if (employees.containsKey(key) == false) {
+            throw new EmployeeAlreadyAdded();
         }
+        employees.remove(key);
     }
-    public Integer id() {
-        Integer id = employees.size();
-        return id;
+    public void addEmployees(String firstName ,String lastName) {
+        Employee employee = new Employee(firstName, lastName);
+        String key = getKey(firstName, lastName);
+        if (employees.containsKey(key) == true) {
+            throw new EmployeeAlreadyAdded();
+        }
+        employees.put(key ,employee);
+    }
+    private String getKey(String firstName, String lastName) {
+        return firstName + " " + lastName;
     }
 }
