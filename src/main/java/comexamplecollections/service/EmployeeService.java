@@ -10,7 +10,7 @@ import java.util.Map;
 @Service
 public class EmployeeService {
 
-    final Map<String,Employee> employees = new HashMap<>(Map.of(
+    final private Map<String,Employee> employees = new HashMap<>(Map.of(
             "Иван Иванов",
             new Employee("Иван", "Иванов",2,100000),
             "Семенов Андрей",
