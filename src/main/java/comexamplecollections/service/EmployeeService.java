@@ -10,15 +10,15 @@ import java.util.Map;
 @Service
 public class EmployeeService {
 
-    final private Map<String,Employee> employees = new HashMap<>(Map.of(
+    final public Map<String,Employee> employees = new HashMap<>(Map.of(
             "Иван Иванов",
             new Employee("Иван", "Иванов",2,100000),
             "Семенов Андрей",
             new Employee("Семенов", "Андрей",1, 34000),
             "Николаев Игорь",
-            new Employee("Николаев", "Игорь", 4, 58000),
+            new Employee("Николаев", "Игорь", 5, 58000),
             "Никитина Анна",
-            new Employee("Никитина", "Анна", 3, 97000),
+            new Employee("Никитина", "Анна", 5, 97000),
             "Тодорашко Валерия",
             new Employee("Тодорашко", "Валерия", 5, 64000),
             "Пименова Ксения",
