@@ -2,6 +2,7 @@ package comexamplecollections.service;
 
 import comexamplecollections.domain.Employee;
 import comexamplecollections.example.EmployeeAlreadyAdded;
+import comexamplecollections.example.EmployeeNotFound;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -30,23 +31,23 @@ public class EmployeeService {
     public Employee findEmployees(String firstName ,String lastName) {
         final Employee employee;
         String key = getKey(firstName, lastName);
-        if (employees.containsKey(key) == false) {
-            throw new EmployeeAlreadyAdded();
+        if (!employees.containsKey(key)) {
+            throw new EmployeeNotFound();
         }
         employee = employees.get(key);
         return employee;
     }
     public void removeEmployees(String firstName ,String lastName) {
         String key = getKey(firstName, lastName);
-        if (employees.containsKey(key) == false) {
-            throw new EmployeeAlreadyAdded();
+        if (!employees.containsKey(key)) {
+            throw new EmployeeNotFound();
         }
         employees.remove(key);
     }
     public void addEmployees(String firstName ,String lastName) {
         Employee employee = new Employee(firstName, lastName);
         String key = getKey(firstName, lastName);
-        if (employees.containsKey(key) == true) {
+        if (employees.containsKey(key)) {
             throw new EmployeeAlreadyAdded();
         }
         employees.put(key ,employee);

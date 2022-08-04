@@ -25,17 +25,17 @@ public class FirstController {
     }
 
     @GetMapping("/add")
-    public String add(@RequestParam("firstName") String firstName,
+    public Employee add(@RequestParam("firstName") String firstName,
                       @RequestParam("lastName") String lastName) {
             employeeService.addEmployees(firstName,lastName);
-        return "Сотрудник добавлен";
+            return employeeService.findEmployees(firstName, lastName);
     }
 
     @GetMapping("/remove")
-    public String remove(@RequestParam("firstName") String firstName,
+    public Employee remove(@RequestParam("firstName") String firstName,
                          @RequestParam("lastName") String lastName) {
             employeeService.removeEmployees(firstName, lastName);
-        return "Сотрудник удален";
+            return employeeService.findEmployees(firstName, lastName);
     }
     @GetMapping("conclusion")
     public Map<String ,Employee> conclusion() {

@@ -30,7 +30,7 @@ public class DepartmentService {
                 .collect(Collectors.toList());
     }
 
-    public Map<Object, List<Employee>> all() {
+    public Map<Integer, List<Employee>> all() {
         return employeeService.employees.values().stream()
                 .collect(Collectors.groupingBy(e -> e.getDepartmentStaff()));
     }
