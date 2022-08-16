@@ -1,0 +1,9 @@
+GET http://localhost:8080/departments/max-salary?departmentId=5
+###
+GET http://localhost:8080/departments/min-salary?departmentId=5
+###
+GET http://localhost:8080/employees/conclusion
+###
+GET http://localhost:8080/departments/all
+###
+GET http://localhost:8080/employees/add?firstName=семен&lastName=семенов
