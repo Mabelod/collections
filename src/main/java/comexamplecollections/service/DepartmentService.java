@@ -16,22 +16,22 @@ public class DepartmentService {
     }
 
     public Employee findMaxSalary(Integer departmentsId) {
-        return employeeService.employees.values().stream().filter(e -> e.getDepartmentStaff() == departmentsId)
-                .max(Comparator.comparingDouble(Employee -> Employee.getSalary())).orElseThrow(() -> new EmployeeNotFound());
+        return employeeService.conclusion().stream().filter(e -> e.getDepartmentStaff() == departmentsId)
+                .max(Comparator.comparingDouble(e -> e.getSalary())).orElseThrow(() -> new EmployeeNotFound());
     }
 
     public Employee findMinSalary(Integer departmentsId) {
-        return employeeService.employees.values().stream().filter(e -> e.getDepartmentStaff() == departmentsId)
+        return employeeService.conclusion().stream().filter(e -> e.getDepartmentStaff() == departmentsId)
                 .min(Comparator.comparingDouble(Employee -> Employee.getSalary())).orElseThrow(() -> new EmployeeNotFound());
     }
 
     public List<Employee> allDepartments(Integer departmentsId) {
-        return employeeService.employees.values().stream().filter(e -> e.getDepartmentStaff() == departmentsId)
+        return employeeService.conclusion().stream().filter(e -> e.getDepartmentStaff() == departmentsId)
                 .collect(Collectors.toList());
     }
 
     public Map<Integer, List<Employee>> all() {
-        return employeeService.employees.values().stream()
+        return employeeService.conclusion().stream()
                 .collect(Collectors.groupingBy(e -> e.getDepartmentStaff()));
     }
 }

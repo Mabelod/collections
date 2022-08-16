@@ -1,5 +1,8 @@
 package comexamplecollections.domain;
 
+import comexamplecollections.example.EmployeeInvalidToken;
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.Objects;
 
 public class Employee {
