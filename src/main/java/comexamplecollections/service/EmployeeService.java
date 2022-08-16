@@ -49,6 +49,8 @@ public class EmployeeService {
         employees.remove(key);
     }
     public void addEmployees(String firstName ,String lastName) {
+        firstName = StringUtils.lowerCase(firstName);
+        lastName = StringUtils.lowerCase(lastName);
         Employee employee = new Employee(StringUtils.capitalize(firstName), StringUtils.capitalize(lastName));
         String key = getKey(firstName, lastName);
         if (employees.containsKey(key)) {
@@ -59,6 +61,8 @@ public class EmployeeService {
         employees.put(key ,employee);
     }
     private String getKey(String firstName, String lastName) {
+        firstName = StringUtils.lowerCase(firstName);
+        lastName = StringUtils.lowerCase(lastName);
         return StringUtils.capitalize(firstName) + " " + StringUtils.capitalize(lastName);
     }
 }

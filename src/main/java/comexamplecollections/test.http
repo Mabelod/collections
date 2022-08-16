@@ -6,4 +6,4 @@ GET http://localhost:8080/employees/conclusion
 ###
 GET http://localhost:8080/departments/all
 ###
-GET http://localhost:8080/employees/add?firstName=семен&lastName=семенов
+GET http://localhost:8080/employees/add?firstName=ИвАн&lastName=ИвАнОвк
