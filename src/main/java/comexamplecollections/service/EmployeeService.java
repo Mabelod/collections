@@ -15,6 +15,8 @@ import java.util.Map;
 @Service
 public class EmployeeService {
 
+    private final ValidatorService validatorService;
+
     final private Map<String,Employee> employees = new HashMap<>(Map.of(
             "Иван Иванов",
             new Employee("Иван", "Иванов",2,100000),
@@ -29,6 +31,11 @@ public class EmployeeService {
             "Пименова Ксения",
             new Employee("Пименова", "Ксения",5, 88000)
     ));
+
+    public EmployeeService(ValidatorService validatorService) {
+        this.validatorService = validatorService;
+    }
+
     public List<Employee> conclusion() {
         return new ArrayList<>(employees.values());
     }
@@ -49,20 +56,14 @@ public class EmployeeService {
         employees.remove(key);
     }
     public void addEmployees(String firstName ,String lastName) {
-        firstName = StringUtils.lowerCase(firstName);
-        lastName = StringUtils.lowerCase(lastName);
-        Employee employee = new Employee(StringUtils.capitalize(firstName), StringUtils.capitalize(lastName));
-        String key = getKey(firstName, lastName);
+        Employee employee = validatorService.validateEmployee(firstName, lastName);
+        String key = getKey(employee.getFirstName(), employee.getLastName());
         if (employees.containsKey(key)) {
             throw new EmployeeAlreadyAdded();
-        } else if (StringUtils.containsAny(key, '1', '2', '3', '4', '5', '6', '7', '8' ,'9' ,'0')) {
-            throw new EmployeeInvalidToken();
         }
         employees.put(key ,employee);
     }
     private String getKey(String firstName, String lastName) {
-        firstName = StringUtils.lowerCase(firstName);
-        lastName = StringUtils.lowerCase(lastName);
         return StringUtils.capitalize(firstName) + " " + StringUtils.capitalize(lastName);
     }
 }

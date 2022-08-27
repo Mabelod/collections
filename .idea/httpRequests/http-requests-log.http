@@ -1,3 +1,69 @@
+GET http://localhost:8080/employees/add?firstName=Иван&lastName=Иванова
+
+<> 2022-08-27T130003.400.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=Иван&lastName=Иванова
+
+<> 2022-08-27T125956.200.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=Ivan&lastName=Ivanov
+
+<> 2022-08-27T125944.200.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=ИвАн&lastName=ИвАновк
+
+<> 2022-08-27T125710.400.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=ИвАн&lastName=ИвАновк
+
+<> 2022-08-27T125709.400.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=ИвАн&lastName=ИвАновк
+
+<> 2022-08-27T125707.400.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=ИвАн&lastName=ИвАновк
+
+<> 2022-08-27T125105.400.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=ИвАн&lastName=ИвАновк
+
+<> 2022-08-27T125011.400.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T124957.200.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=ИвАн&lastName=ИвАнвк
+
+<> 2022-08-27T124948.404.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=ИвАн&lastName=ИвАнОвк
+
+<> 2022-08-27T124931.404.json
+
+###
+
 GET http://localhost:8080/employees/add?firstName=ИвАн&lastName=ИвАнОвк
 
 <> 2022-08-16T161546.200.json
@@ -229,72 +295,6 @@ GET http://localhost:8080/employees/add?firstName=иван&lastName=иванов
 GET http://localhost:8080/employees/add?firstName=иван&lastName=ивановв
 
 <> 2022-08-16T152725.400.json
-
-###
-
-GET http://localhost:8080/employees/add?firstName=иван&lastName=ивановв
-
-<> 2022-08-16T152720.404.json
-
-###
-
-GET http://localhost:8080/departments/all
-
-<> 2022-08-16T152708.200.json
-
-###
-
-GET http://localhost:8080/employees/add?firstName=иван&lastName=иванов
-
-<> 2022-08-16T152704.400.json
-
-###
-
-GET http://localhost:8080/departments/all
-
-<> 2022-08-16T152614.200.json
-
-###
-
-GET http://localhost:8080/employees/add?firstName=иванов&lastName=иван
-
-<> 2022-08-16T152612.400.json
-
-###
-
-GET http://localhost:8080/employees/add?firstName=иванов&lastName=иван
-
-<> 2022-08-16T152609.404.json
-
-###
-
-GET http://localhost:8080/departments/all
-
-<> 2022-08-16T152535.200.json
-
-###
-
-GET http://localhost:8080/employees/add?firstName=иванов&lastName=павел
-
-<> 2022-08-16T152527.404.json
-
-###
-
-GET http://localhost:8080/employees/add?firstName=иванов&lastName=павел
-
-<> 2022-08-16T152518.400.json
-
-###
-
-GET http://localhost:8080/departments/all
-
-<> 2022-08-16T152500.200.json
-
-###
-
-GET http://localhost:8080/employees/add?firstName=иванов&lastName=павел
-
-<> 2022-08-16T152443.404.json
 
 ###
 
