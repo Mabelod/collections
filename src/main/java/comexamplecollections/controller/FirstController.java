@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/employees")
@@ -34,8 +33,7 @@ public class FirstController {
     @GetMapping("/remove")
     public Employee remove(@RequestParam("firstName") String firstName,
                          @RequestParam("lastName") String lastName) {
-            employeeService.removeEmployees(firstName, lastName);
-            return employeeService.findEmployees(firstName, lastName);
+            return employeeService.removeEmployees(firstName, lastName);
     }
     @GetMapping("conclusion")
     public List<Employee> conclusion() {

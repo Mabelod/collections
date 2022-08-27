@@ -2,9 +2,7 @@ package comexamplecollections.service;
 
 import comexamplecollections.domain.Employee;
 import comexamplecollections.example.EmployeeAlreadyAdded;
-import comexamplecollections.example.EmployeeInvalidToken;
 import comexamplecollections.example.EmployeeNotFound;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -48,12 +46,14 @@ public class EmployeeService {
         employee = employees.get(key);
         return employee;
     }
-    public void removeEmployees(String firstName ,String lastName) {
+    public Employee removeEmployees(String firstName ,String lastName) {
+        Employee employee = new Employee(firstName, lastName);
         String key = getKey(firstName, lastName);
         if (!employees.containsKey(key)) {
             throw new EmployeeNotFound();
         }
         employees.remove(key);
+        return employee;
     }
     public Employee addEmployees(String firstName ,String lastName) {
         Employee employee = validatorService.validateEmployee(firstName, lastName);
