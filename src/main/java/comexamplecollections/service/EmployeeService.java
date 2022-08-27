@@ -55,15 +55,16 @@ public class EmployeeService {
         }
         employees.remove(key);
     }
-    public void addEmployees(String firstName ,String lastName) {
+    public Employee addEmployees(String firstName ,String lastName) {
         Employee employee = validatorService.validateEmployee(firstName, lastName);
         String key = getKey(employee.getFirstName(), employee.getLastName());
         if (employees.containsKey(key)) {
             throw new EmployeeAlreadyAdded();
         }
         employees.put(key ,employee);
+        return employee;
     }
     private String getKey(String firstName, String lastName) {
-        return StringUtils.capitalize(firstName) + " " + StringUtils.capitalize(lastName);
+        return firstName + " " + lastName;
     }
 }

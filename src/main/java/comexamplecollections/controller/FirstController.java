@@ -28,8 +28,7 @@ public class FirstController {
     @GetMapping("/add")
     public Employee add(@RequestParam("firstName") String firstName,
                       @RequestParam("lastName") String lastName) {
-            employeeService.addEmployees(firstName,lastName);
-            return employeeService.findEmployees(firstName, lastName);
+           return employeeService.addEmployees(firstName,lastName);
     }
 
     @GetMapping("/remove")
