@@ -1,0 +1,300 @@
+GET http://localhost:8080/departments/max-salary?departmentId=2
+
+<> 2022-08-27T173552.200.json
+
+###
+
+GET http://localhost:8080/departments/max-salary?departmentId=5
+
+<> 2022-08-27T173531.200.json
+
+###
+
+GET http://localhost:8080/departments/min-salary?departmentId=5
+
+<> 2022-08-27T173019.200.json
+
+###
+
+GET http://localhost:8080/departments/max-salary?departmentId=5
+
+<> 2022-08-27T173015.200.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=Иваyн&lastName=Ивyytrановавукe
+
+<> 2022-08-27T161635.404.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=Иваyн&lastName=Ивyytrановавукe
+
+<> 2022-08-27T161632.200.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=ИвyYTrановавукe
+
+<> 2022-08-27T161629.200.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=Иваyн&lastName=Ивyytrановавукe
+
+<> 2022-08-27T161626.404.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T161617.200.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=Иваyн&lastName=Ивyytrановавукe
+
+<> 2022-08-27T161615.404.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=Иваyн&lastName=Ивyytrановавукe
+
+<> 2022-08-27T161613.200.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=ИвyYTrановавукe
+
+<> 2022-08-27T161611.200.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T161610.200.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T161515.200.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=ИвyYTrановавукe
+
+<> 2022-08-27T161514.200.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=Иваyн&lastName=Ивyytrановавукe
+
+<> 2022-08-27T161512.404.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T161509.200.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=ИвyYTrановавукe
+
+<> 2022-08-27T161505.400.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=ИвyYTrановавукe
+
+<> 2022-08-27T161504.200.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T161457.200.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=Иваyн&lastName=Ивyytrановавукe
+
+<> 2022-08-27T161451.404.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T161447.200.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=ИвyYTrановавукe
+
+<> 2022-08-27T161445.200.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T161443.200.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T161309.200.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=Иваyн&lastName=Ивyytrановавукe
+
+<> 2022-08-27T161307.404.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=ИвyYTrановавукe
+
+<> 2022-08-27T161306.200.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=Иваyн&lastName=Ивyytrановавукe
+
+<> 2022-08-27T161301.404.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T161253.200.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=Иваyн&lastName=Ивyytrановавукe
+
+<> 2022-08-27T161250.404.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T161238.200.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=Иван&lastName=Ивyytrановавукe
+
+<> 2022-08-27T161235.404.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T161227.200.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=Иван&lastName=Ивууtrановуке
+
+<> 2022-08-27T161224.404.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T161151.200.json
+
+###
+
+GET http://localhost:8080/employees/remove?firstName=иВаYн&lastName=ИвyYTrановавукe
+
+<> 2022-08-27T161146.404.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=ИвyYTrановавукe
+
+<> 2022-08-27T161046.200.json
+
+###
+
+GET http://localhost:8080/employees/conclusion
+
+<> 2022-08-27T154205.200.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=ИвyYTrановавук
+
+<> 2022-08-27T132825.400.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=ИвyYTrановавук
+
+<> 2022-08-27T132814.200.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=Ивановавук
+
+<> 2022-08-27T132809.400.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=Ивановавук
+
+<> 2022-08-27T132807.400.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВаYн&lastName=Ивановавук
+
+<> 2022-08-27T132805.200.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВан&lastName=Ивановавук
+
+<> 2022-08-27T132754.400.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВан&lastName=Ивановавук
+
+<> 2022-08-27T132750.200.json
+
+###
+
+GET http://localhost:8080/employees/conclusion
+
+<> 2022-08-27T132630.200.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВан&lastName=Ивановавук
+
+<> 2022-08-27T132628.400.json
+
+###
+
+GET http://localhost:8080/employees/add?firstName=иВан&lastName=Ивановавук
+
+<> 2022-08-27T132622.400.json
+
+###
+
+GET http://localhost:8080/departments/all
+
+<> 2022-08-27T132618.200.json
+
+###
+
+GET http://localhost:8080/employees/conclusion
+
+<> 2022-08-27T132615.200.json
+
+###
+
